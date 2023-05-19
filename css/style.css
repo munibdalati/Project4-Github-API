@@ -1,0 +1,660 @@
+body {
+    --background-color: #fff;
+    --text-color : #0d1117;
+    --search-border-color:#616973;
+    --follow-btn-background  : #f3f4f6;
+    --follow-btn-text : black;
+    --hr-color:#eeeeee;
+    --pinned-color:#b7b8ba;
+    --hint-color:red;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+
+}
+body.dark {
+    --background-color: #0d1117;
+    --text-color : #fff;
+    --search-border-color:#616973;
+    --follow-btn-background : #30363d;
+    --follow-btn-text : #c9d1d9;
+    --hr-color:#7d8590;
+    --pinned-color:#e1e7ee;
+    --hint-color:lightgreen;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+    /* color: var(--text-color); */
+  }
+  /* -------------------------*** Header ***------------------------- */
+  header {
+    background-color: #262626;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 30px;
+  }
+  
+  li {
+    list-style: none;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .logo img {
+    width: 32px;
+    height: 32px;
+  }
+  .navbar {
+    min-height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0 25px; */
+  }
+  
+  .nav-menu {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+  }
+  .nav-branding {
+    font-size: 2rem;
+  }
+  .nav-link {
+    transition: 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #babbbd;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  /* search */
+  .search-bar {
+    margin-left: 20px;
+    margin-right: 10px;
+
+
+    
+    
+
+  }
+  
+  .search-bar form input {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: 1.5px solid #30363d;
+    width: 275px;
+    padding: 2px 3px 2px 10px;
+    width: 100%;
+    background-color: transparent;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    
+  }
+  
+  ::placeholder {
+    color: #c5c6c8;
+    font-size: 14px;
+    
+  }
+  #dropdown {
+    width: 9px;
+    height: 9px;
+    margin-top: -1px;
+  }
+  #nav-user-img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  .nav-right {
+    display: flex;
+  }
+  .nav-right {
+    display: flex;
+  }
+  .nav-right li {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  .nav-right li img {
+    margin-left: 2px;
+  }
+  #dark-img {
+    width: 20px;
+    height: 20px;
+  }
+  .mobile-right {
+    display: none;
+  }
+  .mobile-right div {
+    display: flex;
+    justify-content: space-between;
+    width: 40px;
+  }
+
+  .moon-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    header{
+        padding: 0 15px;
+    }
+    .hamburger {
+      display: block;
+    }
+    .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 65px;
+      gap: 0;
+      flex-direction: column;
+      background-color: #262626;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .nav-item {
+      margin: 16px 0;
+    }
+    .nav-menu.active {
+      left: 0;
+    }
+    .display-none {
+      display: none;
+    }
+    .mobile-right {
+      display: block;
+    }
+  }
+  /* -------------------------*** Body ***------------------------- */
+  
+
+/* Second navbar */
+.Second-navbar{
+    color:var(--text-color) ;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 25px;
+    margin-left: 18%;
+    margin-right: 18%;
+    margin-top: 15px;
+}
+
+.Second-navbar a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.main{
+    margin-top: 15px;
+    display: flex;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+}
+.photo-names{
+    display: flex;
+    flex-direction: column;
+
+}
+#profile-img{
+    width: 250px;
+    border-radius: 150px;
+}
+.photo-names{
+    display: flex;
+}
+#name{
+    font-size: 30px;
+
+}
+#username{
+    font-size: 15px;
+    color: #9da2a7;
+}
+.info{
+  margin-top: 10px;
+    margin-left: 5%;
+
+}
+#followers{
+    margin-left: 6%;
+    margin-top: 12px;
+}
+
+#location{
+  margin-left: 6%;
+    margin-top: 12px;
+}
+
+.follow-btn-mob{
+    margin: 5%;
+    border-radius: 6px;
+    padding: 6px;
+    border: 0.1px solid #d6d8db;
+    background-color:var(--follow-btn-background) ;
+    color: var(--follow-btn-text);
+
+}
+.Second-navbar-mob{
+    display: none;
+    
+}
+
+.end-sidebar-hr{
+    display: none;
+}
+#pinned{
+    margin-left: 6.2%;
+    font-size: 16px;
+    margin-top: 15px;
+    color: var(--pinned-color);
+  }
+
+.repo-with-title{
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+.all-repo{
+    display: grid;
+    width: 80%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-left: 5%;
+}
+.repository{
+    display: flex;
+    flex-direction: column;
+    margin: 3% 3%;
+    border: 0.01rem solid var(--hr-color);
+    border-radius: 5px;
+    padding: 6%;
+}
+
+.language-dot{
+  display: flex;
+}
+
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 4px;
+    margin-right: 3px;
+  }
+
+ 
+  .repo-title{
+    color: blue;
+  }
+  .title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10%;
+  }
+  .public{
+    border: 1px solid #cdcfd2;
+    color: grey;
+    padding: 0.5% 2%;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 500;
+
+  }
+
+  /* __________________compare page____________________ */
+
+  .compare-title{
+    text-align: center;
+    font-size: 60px;
+    margin-top: 30px;
+  }
+  .hint{
+    border: 1px solid;
+    text-align: center;
+    margin: 2% 30%;
+    padding: 10px;
+    color: var(--hint-color);
+  }
+  
+  .two-searchbars{
+    display: flex;
+    justify-content: center;
+    gap: 8%;
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+  }
+  
+  
+  .compare-searchbar {
+    height: 40px;
+    width: 290px;
+    margin-top: 15px;
+    
+  
+  }
+
+  .compare-searchbar::placeholder{
+    padding-left: 10px;
+    
+  }
+
+  @media (min-width:768px) {
+    .compare-btn-mob{
+      display: none;
+    }
+
+
+    } 
+    
+.compare-btn{
+      padding: 5px 10px 8px 10px;
+      border-radius: 12px;
+      color:var(--background-color);
+      background-color: var(--text-color);
+      font-size: 1rem;
+      margin-top: 1%;
+  
+  }
+ 
+  
+  .compettitor-img{
+    width:30%;
+    border-radius: 200px;
+  }
+
+  .competitor-info{
+    margin: 0 3%;
+    font-size: 1rem;
+    line-height: 35px;
+  }
+  
+  .competitors{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 80px;
+  }
+  
+  .competitor{
+    display: flex;
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footer{
+    text-align: center;
+    margin: 2% 2%;
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+  .footer a{
+    color:#418be2;
+    margin-left: 16px;
+
+  }
+
+  .situation{
+    font-size: 40px;
+    margin-bottom: 16px;
+  }
+
+
+
+@media (max-width:768px) {
+    .Second-navbar{
+        display: none;
+    }
+    .main{
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    .photo-names{
+        display: flex;
+        flex-direction: row;
+    }
+    .sidebar{
+        display: flex;
+        flex-direction: column;
+        margin-left: 2%;
+    }
+    #profile-img{
+        width: 70px;
+        border-radius: 50px;
+        margin-left: 5%;
+    }
+
+    #name{
+        margin-top: 5px;
+        font-size: 25px;
+
+    }
+    #username{
+        font-size: 15px;
+        color: #9da2a7;
+    }
+
+
+
+    .follow-btn-mob{
+        margin: 5%;
+        border-radius: 6px;
+        padding: 6px;
+        border: 0.1px solid #d6d8db;
+        background-color:var(--follow-btn-background) ;
+        color: var(--follow-btn-text);
+
+    }
+    .Second-navbar-mob{
+        color:black ;
+        min-height: 70px;
+        display: flex;
+        gap: 15px;
+
+        align-items: center;
+        padding: 0 25px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 15px;
+        overflow: auto;
+        white-space: nowrap;
+
+    }
+    
+    .Second-navbar-mob a{
+        color: var(--text-color);
+        text-decoration: none;
+    }
+    .end-sidebar-hr{
+        border-top: 1px solid #d8dee4;
+        margin: 0 5%
+    }
+
+
+    .repo-with-title{
+        display: flex;
+        flex-direction: column;
+        width: 100%
+    }
+    .all-repo{
+        display: flex;
+        width: 90%;
+        flex-direction: column;
+        
+
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+        background-color: red;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      #pinned{
+        font-size: 16px;
+        margin-top: 15px;
+        color: #3a3e42;
+      }
+
+
+      .repository{
+        display: flex;
+        flex-direction: column;
+        margin: 4% 2%;
+        border: 1px solid #d8dee4;
+        border-radius: 5px;
+        padding: 6%;
+      }
+      .repo-title{
+        color: blue;
+      }
+      .title{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10%;
+      }
+      .public{
+        border: 1px solid #cdcfd2;
+        color: grey;
+        padding: 0.5% 2%;
+        border-radius: 15px;
+        font-size: 11px;
+        font-weight: 500;
+        
+    }
+    .github-footer{
+        display: none;
+    }
+
+
+    /* ______________________compare page_________________________________ */
+
+.compare-title{
+  text-align: center;
+  font-size: 30px;
+  margin-top: 15px;
+}
+.hint{
+  border: 1px solid;
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  color: var(--hint-color);
+}
+
+.two-searchbars{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0px;
+}
+
+
+.compare-searchbar {
+  height: 30px;
+  width: 230px;
+  margin-top: 0px;
+
+}
+
+.compare-btn-desktop{
+  display: none;
+}
+
+.compettitor-img{
+  width:40%;
+  border-radius: 150px;
+}
+
+.competitor-info{
+  font-size: 0.9rem;
+  line-height: 20px;
+}
+
+.situation{
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.competitors{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.competitor{
+  display: flex;
+  width: 95%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+}
+
+/* 
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5){
+
+  html,
+  body{
+    width:100%;
+    overflow-x:hidden;
+  }
+
+} */
+
+
+

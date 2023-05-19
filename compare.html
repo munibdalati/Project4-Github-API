@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- linking css file -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <title>Document</title>
+        <!-- fontawesome kit -->
+        <script src="https://kit.fontawesome.com/fe93bef9ec.js"
+            crossorigin="anonymous"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="hamburger">
+                    <img src="assets/icon/menu.svg" alt="menu" />
+                </div>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/icon/github-mark-white.svg" alt="logo"
+                            />
+                    </a>
+                </div>
+
+                <ul class="nav-menu">
+                    <li class="search-bar nav-item">
+                        <form role="search" id="myForm">
+                            <input class="form-control me-2 navsearchbar"
+                                id="search"
+                                type="search"
+                                placeholder="🔍 Search or jump to..."
+                                aria-label="Search">
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Pull requests</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Issues</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Codespaces</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Marketplace</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="compare.html" class="nav-link">Comparison</a>
+                    </li>
+                </ul>
+                <!-- nav 2 -->
+                <ul class="nav-right display-none">
+                    <li>
+                        <button class="moon-btn"><i class="fa-solid fa-moon
+                                fa-lg" style="color: #ffffff;"></i></button>
+                    </li>
+                    <li class="notification">
+                        <img src="assets/icon/bell.svg" alt="notification" />
+                    </li>
+                    <li>
+                        <img src="assets/icon/plus.svg" alt="plus" />
+                        <img src="assets/icon/dropdown2.svg" alt="dropdown"
+                            id="dropdown" />
+                    </li>
+                    <li>
+                        <img
+                            src="assets/img/munib.jpg"
+                            alt="user-img"
+                            id="nav-user-img"
+                            />
+                        <img src="assets/icon/dropdown2.svg" alt="dropdown"
+                            id="dropdown" />
+                    </li>
+                </ul>
+                <!-- mobile -->
+                <div class="mobile-right">
+                    <div>
+                        <img src="assets/icon/bell.svg" alt="notification" />
+                        <button class="moon-btn"><i class="fa-solid fa-moon
+                                fa-lg" style="color: #ffffff; margin-top: 7px;"></i></button>
+                    </div>
+                </div>
+                <!-- <div class="hamburger">
+              <img src="assets/icon/menu.svg" alt="menu" />
+            </div> -->
+            </nav>
+        </header>
+
+        <p class="compare-title">Comparsion Page</p>
+        <p class="hint"> Hint: Total Score = Total reposetories + Total
+            followers</p>
+
+        <div class="two-searchbars">
+
+            <form>
+                <input class="compare-searchbar"
+                    id="searchBar1"
+                    placeholder="🔍 Enter the first user..."
+                    aria-label="Search">
+            </form>
+
+            <button class="compare-btn-desktop compare-btn" id="compare-btn">Compare</button>
+            <form>
+                <input class="compare-searchbar"
+                    id="searchBar2"
+                    placeholder="🔍 Enter the Second user..."
+                    aria-label="Search">
+            </form>
+
+            <button class="compare-btn-mob compare-btn" >Compare</button>
+
+        </div>
+
+
+
+        <div class="competitors">
+            <div class="competitor">
+
+                <img class="compettitor-img" id="first-img" src="assets/img/1.png" alt="">
+
+                <div class="competitor-info">
+                    <p class="situation" id="first-user"> ?</p>
+                    <p class="username-coparsion" id="username1">username</p>
+                    <p id="total-repositores1">Total reposetories:</p>
+                    <p id="total-followers1">Total followers:</p>
+                    <p id="total-score1">Total Score: </p>
+                </div>
+
+            </div>
+
+            
+
+            <div class="competitor">
+
+                
+
+                <div class="competitor-info">
+                    <p class="situation" id="second-user">?</p>
+                    <p class="username-coparsion" id="username2">username</p>
+                    <p id="total-repositores2">Total reposetories:</p>
+                    <p id="total-followers2">Total followers:</p>
+                    <p id="total-score2">Total Score: </p>
+                </div>
+
+                <img class="compettitor-img" id="second-img" src="assets/img/2.png" alt="">
+
+            </div>
+
+
+        </div>
+
+        <hr style="margin-left: 5%; margin-right: 5%; background-color:var(--hr-color); border: 0; height: 0.1px; margin-top: 30px;">
+
+        <footer class="footer">
+            
+            <a style="color:#5e656e ;" class="github-footer"><i class="fa-brands fa-github fa-2xl" style="color: #9299a0;"></i> © 2023 GitHub, Inc.</a>
+            <a href="">Terms</a>
+            <a href="">Privacy</a>
+            <a href="">Security</a>
+            <a href="">Status</a>
+            <a href="">Docs</a>
+            <a href="">Contact GitHub</a>
+            <a href="">Pricing</a>
+            <a href="">API</a>
+            <a href="">Training</a>
+            <a href="">Blog</a>
+            <a href="">About</a>
+            
+
+        </footer>
+
+
+
+
+
+    </body>
+    <script src="js/script.js"></script>
+    <script src="js/compare.js"></script>
+</html>

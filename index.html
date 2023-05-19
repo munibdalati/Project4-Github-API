@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://kit.fontawesome.com/fe93bef9ec.js"
+            crossorigin="anonymous"></script>
+        <title>Document</title>
+    </head>
+    <body>
+
+        <header>
+            <nav class="navbar">
+                <div class="hamburger">
+                    <img src="assets/icon/menu.svg" alt="menu" />
+                </div>
+                <div class="logo">
+                    <a href="#">
+                        <img src="assets/icon/github-mark-white.svg" alt="logo"
+                            />
+                    </a>
+                </div>
+
+                <ul class="nav-menu">
+                    <li class="search-bar nav-item">
+                        <form role="search" id="myForm">
+                            <input class="form-control me-2 navsearchbar"
+                                id="search"
+                                type="search"
+                                placeholder="🔍 Search or jump to..."
+                                aria-label="Search">
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Pull requests</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Issues</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Codespaces</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Marketplace</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="compare.html" class="nav-link">Comparison</a>
+                    </li>
+                </ul>
+                <!-- nav 2 -->
+                <ul class="nav-right display-none">
+                    <li>
+                        <button class="moon-btn"><i class="fa-solid fa-moon fa-lg" style="color: #ffffff;"></i></button>
+                        
+                    </li>
+                    <li class="notification">
+                        <img src="assets/icon/bell.svg" alt="notification" />
+                    </li>
+                    <li>
+                        <img src="assets/icon/plus.svg" alt="plus" />
+                        <img src="assets/icon/dropdown2.svg" alt="dropdown"
+                            id="dropdown" />
+                    </li>
+                    <li>
+                        <img
+                            src="assets/img/munib.jpg"
+                            alt="user-img"
+                            id="nav-user-img"
+                            />
+                        <img src="assets/icon/dropdown2.svg" alt="dropdown"
+                            id="dropdown" />
+                    </li>
+                </ul>
+                <!-- mobile -->
+                <div class="mobile-right">
+                    <div>
+                        <img src="assets/icon/bell.svg" alt="notification" />
+                        <button class="moon-btn"><i class="fa-solid fa-moon fa-lg" style="color: #ffffff; margin-top: 7px;"></i></button>
+                    </div>
+                </div>
+                <!-- <div class="hamburger">
+                  <img src="assets/icon/menu.svg" alt="menu" />
+                </div> -->
+            </nav>
+        </header>
+
+        <nav class="Second-navbar">
+            <a href=""><i class="fa-solid fa-book-open" style="color:
+                    #7d8590;"></i> Overview</a>
+            <a href=""><i
+                    class="fa-solid fa-laptop-code"
+                    style="color:
+                    #7d8590;"></i> Repositories</a>
+            <a href=""><i
+                    class="fa-solid fa-table-list" style="color:
+                    #7d8590;"></i> Projects</a>
+            <a href=""><i
+                    class="fa-solid fa-cube" style="color:
+                    #7d8590;"></i> Packages</a>
+            <a href=""><i
+                    class="fa-regular fa-star" style="color:
+                    #7d8590;"></i> Stars</a>
+        </nav>
+
+        <hr style="background-color:var(--hr-color); border: 0; height: 0.1px;">
+
+        <div class="main">
+            <div class="sidebar">
+                <div class="photo-names">
+                    <img id=profile-img src="assets/img/1.png" alt="">
+                    <div class="info">
+                        <p id="name">Name</p>
+                        <p id="username">username</p>
+    
+                    </div>
+    
+                </div>
+                <div id="followers"><i class="fa-regular fa-user mt-1 mx-1"
+                        style="color:
+                        #7a818c;""></i> 0 followers . 0 following</div>
+                <p id="location"></p>
+    
+    
+                <button class="follow-btn-mob">Follow</button>
+    
+                <hr class="end-sidebar-hr">
+
+            </div>
+            
+            <nav class="Second-navbar-mob">
+                <a href=""><i class="fa-solid fa-book-open" style="color:
+                        #7d8590;"></i> Overview</a>
+                <a href=""><i
+                        class="fa-solid fa-laptop-code"
+                        style="color:
+                        #7d8590;"></i> Repositories</a>
+                <a href=""><i
+                        class="fa-solid fa-table-list" style="color:
+                        #7d8590;"></i> Projects</a>
+                <a href=""><i
+                        class="fa-solid fa-cube" style="color:
+                        #7d8590;"></i> Packages</a>
+                <a href=""><i
+                        class="fa-regular fa-star" style="color:
+                        #7d8590;"></i> Stars</a>
+            </nav>
+            <hr style="background-color:var(--hr-color); border: 0; height: 0.1px;;">
+
+            <div class="repo-with-title">
+                <p id="pinned">Pinned</p>
+                <div class="all-repo" >
+    
+                    <div class="repository">
+                    
+                        <div class="title">
+                            <a id="repo1" class="repo-title" href=""><i class="fa-solid fa-laptop-code" style="color: #7d8590;"></i> First Repository</a>
+                            <p class="public">Public</p>
+        
+                        </div>
+
+                        <div class="language-dot">
+                            <span class="dot" id="dot1"></span>
+                            <p id="language1"></p>
+                        </div>
+
+        
+                    </div>
+                    <div class="repository">
+                        
+                        <div class="title">
+                            <p id="repo2" class="repo-title"><i class="fa-solid fa-laptop-code" style="color: #7d8590;"></i> Second Repository</p>
+                            <p class="public">Public</p>
+        
+                        </div>
+                        
+                        <div class="language-dot">
+                            <span class="dot" id="dot2"></span>
+                            <p id="language2"></p>
+                        </div>
+        
+                    </div>
+                    <div class="repository">
+                        
+                        <div class="title">
+                            <p id="repo3" class="repo-title"><i class="fa-solid fa-laptop-code" style="color: #7d8590;"></i> Third Repository</p>
+                            <p class="public">Public</p>
+        
+                        </div>
+                        
+                        <div class="language-dot">
+                            <span class="dot" id="dot3"></span>
+                            <p id="language3"></p>
+                        </div>        
+                    </div>
+                    <div class="repository">
+                        
+                        <div class="title">
+                            <p id="repo4" class="repo-title"><i class="fa-solid fa-laptop-code" style="color: #7d8590;"></i> Fourth Repository</p>
+                            <p class="public">Public</p>
+        
+                        </div>
+                        
+                        <div class="language-dot">
+                            <span class="dot" id="dot4"></span>
+                            <p id="language4"></p>
+                        </div>        
+                    </div>
+                    <div class="repository">
+                        
+                        <div class="title">
+                            <p id="repo5" class="repo-title"><i class="fa-solid fa-laptop-code" style="color: #7d8590;"></i> Fifth Repository</p>
+                            <p class="public">Public</p>
+        
+                        </div>
+                        
+                        <div class="language-dot">
+                            <span class="dot" id="dot5"></span>
+                            <p id="language5"></p>
+                        </div>        
+                    </div>
+                    <div class="repository">
+                        
+                        <div class="title">
+                            <p id="repo6" class="repo-title"><i class="fa-solid fa-laptop-code" style="color: #7d8590;"></i> Sixth Repository</p>
+                            <p class="public">Public</p>
+        
+                        </div>
+                        
+                        <div class="language-dot">
+                            <span class="dot" id="dot6"></span>
+                            <p id="language6"></p>
+                        </div>        
+                    </div>
+
+            </div>
+
+
+
+            </div>
+            
+
+        </div>
+
+        <hr style="margin-left: 5%; margin-right: 5%; background-color:var(--hr-color); border: 0; height: 0.1px; margin-top: 30px;">
+
+        <footer class="footer">
+            
+            <a style="color:#5e656e;" class="github-footer"><i class="fa-brands fa-github fa-2xl" style="color: #9299a0;"></i> © 2023 GitHub, Inc.</a>
+            <a href="">Terms</a>
+            <a href="">Privacy</a>
+            <a href="">Security</a>
+            <a href="">Status</a>
+            <a href="">Docs</a>
+            <a href="">Contact GitHub</a>
+            <a href="">Pricing</a>
+            <a href="">API</a>
+            <a href="">Training</a>
+            <a href="">Blog</a>
+            <a href="">About</a>
+            
+
+        </footer>
+
+
+
+
+    </body>
+    <script src="js/script.js"></script>
+</html>
