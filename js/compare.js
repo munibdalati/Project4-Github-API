@@ -13,7 +13,7 @@ function compare() {
   if (searchValue1 === '' || searchValue2 === '') {
     alert('Fill all the blanks');
   } else {
-    let token = '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';
+    let token = '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';
     fetch(`https://api.github.com/users/${searchValue1}`, {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -46,9 +46,20 @@ function compare() {
             } else if (data1.followers + data1.public_repos < data2.followers + data2.public_repos) {
               document.getElementById('first-user').innerHTML = 'Loser';
               document.getElementById('second-user').innerHTML = 'Winner';
-            } else {
+            }
+            else if(data1.followers + data1.public_repos == data2.followers + data2.public_repos) {
               document.getElementById('first-user').innerHTML = 'Draw';
               document.getElementById('second-user').innerHTML = 'Draw';
+            } else {
+              if (data1.login == undefined && data2.login == undefined){
+                alert("user1 and user2 are not found")
+              }
+              else if (data1.login == undefined){
+                alert("user1 is not found")
+              }
+              else if (data2.login == undefined){
+                alert("user2 is not found")
+              }
             }
           });
       });

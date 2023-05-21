@@ -23,16 +23,21 @@ form.addEventListener('submit', function(e){
     var search = document.getElementById("search").value;
 
     var originalName = search.split(" ").join("")
-    let token ='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'
-    fetch(`https://api.github.com/users/${originalName}`, {
+    let token ='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'
+    fetch(`https://api.github.com/users/${originalName}`
+    , {
         headers: {
           Authorization: `Bearer ${token}`
         }
       })
     .then((result) => result.json())
     .then((data) =>{
-        console.log(data);
-        document.getElementById("profile-img").setAttribute('src',data.avatar_url )
+        
+        if (data.name == undefined){
+          alert("username is not found")
+        }
+        else{
+          document.getElementById("profile-img").setAttribute('src',data.avatar_url )
         document.getElementById("name").innerHTML = data.name
         document.getElementById("username").innerHTML = data.login
         document.getElementById("followers").innerHTML =
@@ -46,6 +51,9 @@ form.addEventListener('submit', function(e){
         else{
             document.getElementById("location").innerHTML=""
         }
+
+        }
+        
 
     })
     //calling the repo
