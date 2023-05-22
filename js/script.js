@@ -24,12 +24,12 @@ form.addEventListener('submit', function(e){
 
     var originalName = search.split(" ").join("")
     let token ='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'
-    fetch(`https://api.github.com/users/${originalName}`
-    , {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      })
+    fetch(`https://api.github.com/users/${originalName}`)
+    // , {
+    //     headers: {
+    //       Authorization: `Bearer ${token}`
+    //     }
+    //   })
     .then((result) => result.json())
     .then((data) =>{
         
@@ -59,11 +59,12 @@ form.addEventListener('submit', function(e){
     //calling the repo
 
     
-    fetch(`https://api.github.com/users/${originalName}/repos`,{
-            headers: {
-              Authorization:`Bearer ${token}`
-            }
-          })
+    fetch(`https://api.github.com/users/${originalName}/repos`)
+    // ,{
+    //         headers: {
+    //           Authorization:`Bearer ${token}`
+    //         }
+    //       })
 
         .then((response)=> response.json())
         .then((repositories)=>{

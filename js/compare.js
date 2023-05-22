@@ -14,11 +14,12 @@ function compare() {
     alert('Fill all the blanks');
   } else {
     let token = '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';
-    fetch(`https://api.github.com/users/${searchValue1}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
+    fetch(`https://api.github.com/users/${searchValue1}`,)
+    // , {
+    //   headers: {
+    //     Authorization: `Bearer ${token}`,
+    //   },
+    // })
       .then((result1) => result1.json())
       .then((data1) => {
         document.getElementById('total-repositores1').innerHTML = `Total repositories: ${data1.public_repos}`;
@@ -27,11 +28,12 @@ function compare() {
         document.getElementById('username1').innerHTML = data1.login;
         document.getElementById('first-img').setAttribute('src', data1.avatar_url);
 
-        fetch(`https://api.github.com/users/${searchValue2}`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
+        fetch(`https://api.github.com/users/${searchValue2}`)
+        // , {
+        //   headers: {
+        //     Authorization: `Bearer ${token}`,
+        //   },
+        // })
           .then((result2) => result2.json())
           .then((data2) => {
             document.getElementById('total-repositores2').innerHTML = `Total repositories: ${data2.public_repos}`;
@@ -54,10 +56,11 @@ function compare() {
               if (data1.login == undefined && data2.login == undefined){
                 alert("user1 and user2 are not found")
               }
-              else if (data1.login == undefined){
+              else if (data1.login === undefined){
                 alert("user1 is not found")
               }
-              else if (data2.login == undefined){
+              else if (data2.login === undefined){
+                console.log(data2.login);
                 alert("user2 is not found")
               }
             }

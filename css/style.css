@@ -60,12 +60,10 @@ body.dark {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding: 0 25px; */
   }
   
   .nav-menu {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     gap: 16px;
     width: 100%;
@@ -322,6 +320,8 @@ body.dark {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10%;
+    gap: 10px;
+    flex-wrap: wrap;
   }
   .public{
     border: 1px solid #cdcfd2;
@@ -552,11 +552,14 @@ body.dark {
       }
       .repo-title{
         color: blue;
+      
       }
       .title{
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 10%;
+        gap:10px
       }
       .public{
         border: 1px solid #cdcfd2;
